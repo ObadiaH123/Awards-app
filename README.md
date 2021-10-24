@@ -99,10 +99,3 @@ Projects- This endpoint return information pertaining to all the projects posted
 
 
 
-## License
-
-This project is licensed under the MIT License
-
-## Contact Details
-If you encounter any bugs, email me kiplangatbett5@gmail.com. If you would like to add some changes, please feel free to
-fork the project and make a pull request.
