@@ -1,60 +1,60 @@
 :root {
     --bg: #071e36;
     --card-bg: #041221;
-  }
-  
-  body {
+}
+
+body {
     background: var(--bg);
-  }
-  
-  .box {
-  
+}
+
+.box {
     background: var(--card-bg);
-  }
-  
-  
-  input::placeholder {
+}
+
+input::placeholder {
     color: antiquewhite;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     background: var(--card-bg);
-  }
-  
-  .navbar-item {
+}
+
+.navbar-item {
     color: ghostwhite;
-  }
-  
-  /* Card start*/
-  .card {
+}
+
+
+/* Card start*/
+
+.card {
     overflow: hidden;
-    background: ghostwhite;
+    background: rgb(25, 25, 204);
     color: var(--bg);
-  }
-  
-  .card.large {
+}
+
+.card.large {
     border-radius: 5px;
-  }
-  
-  .title.no-padding {
+}
+
+.title.no-padding {
     margin-bottom: 0 !important;
-  }
-  
-  .footer {
+}
+
+.footer {
     background: var(--card-bg);
     color: ghostwhite;
-  }
-  
-  .footer p,
-  strong {
+}
+
+.footer p,
+strong {
     color: ghostwhite
-  }
-  
-  .footer a:hover {
+}
+
+.footer a:hover {
     color: crimson;
-  }
-  
-  .fa {
+}
+
+.fa {
     color: ghostwhite;
     margin: 10px
-  }
+}
