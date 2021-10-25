@@ -6,7 +6,7 @@ from .models import *
 class UploadProjectForm(forms.ModelForm):
     class Meta:
         model=Award
-        fields=('name','description','developer','created_date','image','linktosite')
+        fields=('Name','Description','developer','created_date','image','linktosite')
 
 class ReviewForm(forms.ModelForm):
     class Meta:
