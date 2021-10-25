@@ -42,7 +42,7 @@ input::placeholder {
 
 .footer {
     background: var(--card-bg);
-    color: ghostwhite;
+    color: chartreuse;
 }
 
 .footer p,
