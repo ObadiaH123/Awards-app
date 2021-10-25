@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='ProjectReview',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('comments', models.TextField(max_length=1500)),
+                ('comments', models.TextField(max_length=15000)),
                 ('rating', models.FloatField(default=0)),
                 ('project', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.award')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
