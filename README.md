@@ -97,5 +97,10 @@ Projects- This endpoint return information pertaining to all the projects posted
 
     Cannot search for projects
 
+Copyright (c) 2021 Benard Kiprotich Bett
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 
