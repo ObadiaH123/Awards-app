@@ -1,7 +1,7 @@
 
 ## Author
 
-BENARD K. BETT
+KIPROTICH BETT
 
 ## Description
 This is a django-python application where developers can upload their projects and peers can review and rate them. Projects are reviewed and rated according to usability, design and content.
