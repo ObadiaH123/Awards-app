@@ -1,10 +1,8 @@
-{% extends 'main/base.html' %}
-
-{% block content%}
+{% extends 'main/base.html' %} {% block content%}
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,19 +14,20 @@
     <link rel="stylesheet" type="text/css" href="static/css/cards.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  </head>
+</head>
 
-  <body>
+<body>
     <section class="hero is-medium">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-1 ">Welcome to JoeKumsy Awwards Site</h1>
-          <h5 class="title is-5">Where you can review different projects of<span style="color: #043030;" class="is-1"> Joseph Gakumo</span></h5>
-          <h4 class="title is-6">Github Search Project</h4>
-          <p class="text-light">This is a website where users may enter a GitHub username into the search input, submit it,<br> and see names and descriptions of that person's public repositories. A person can also look for repositories of that person. This project was generated with Angular CLI version 12.2.0.</p>
-            <a href="https://joegakumo21.github.io/Github-Search/" class="button is-white is-medium is-inverted" style="text-decoration: none;">Github Search app &ensp;<i class="fad fa-chevron-right" style="text-decoration: none;"></i></a>      
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1 ">Welcome to Eng. ObadiaH Awwards Site</h1>
+                <h5 class="title is-5">Where you can review different projects of<span style="color: #043030;" class="is-1"> Joseph Gakumo</span></h5>
+                <h4 class="title is-6">Github Search Project</h4>
+                <p class="text-light">This is a website where users may enter a GitHub username into the search input, submit it,<br> and see names and descriptions of that person's public repositories. A person can also look for repositories of that person. This project was
+                    generated with Angular CLI version 12.2.0.</p>
+                <a href="https://joegakumo21.github.io/Github-Search/" class="button is-white is-medium is-inverted" style="text-decoration: none;">Github Search app &ensp;<i class="fad fa-chevron-right" style="text-decoration: none;"></i></a>
+            </div>
         </div>
-      </div>
     </section>
     <!-- <section id="parallax-1" class="hero is-large ">
       <div class="hero-body">
@@ -45,129 +44,130 @@
       </div>
     </section> -->
     <section id="parallax-1" class="hero is-large ">
-      <div class="hero-body">
-        <div class="container">
-        <div class="">
-          <div class="">
-            <div class="row">
-              <div class="columns">
-                <div class="column has-text-centered">
-                  <h1 class="title" style="color: ghostwhite;">My Projects</h1><br>
-                  <hr>
-                </div>
-              </div>
-            {% for award in awards %}
-            <div class="col-md-4">
-              <div class=" m-2"  >
-                <div class="">                 
-                    <div class="card large">
-                      <div class="card-image">
-                        <figure class="image is-16by9">
-                          <img src="{{award.image}}" alt="Image" class="img-fluid">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-left">
-                            <figure class="image is-48x48">
-                              <img src="{{award.image}}" alt="img-fluid" width="75%">
-                            </figure>
-                          </div>
-                          <div class="media-content">
-                            <p class="title is-4 no-padding">{{award.developer}}</p>
-                            <p>
-                              <span class="title is-6">
-                                  <span style="color: black;">Explore more </span><a href="{% url 'main:detail' award.id %}" style="text-decoration: none;">  {{award.name}} </a> </span> </p>
-                            <p class="subtitle is-6">{{award.}}</p>
-                          </div>
+        <div class="hero-body">
+            <div class="container">
+                <div class="">
+                    <div class="">
+                        <div class="row">
+                            <div class="columns">
+                                <div class="column has-text-centered">
+                                    <h1 class="title" style="color: ghostwhite;">My Projects</h1><br>
+                                    <hr>
+                                </div>
+                            </div>
+                            {% for award in awards %}
+                            <div class="col-md-4">
+                                <div class=" m-2">
+                                    <div class="">
+                                        <div class="card large">
+                                            <div class="card-image">
+                                                <figure class="image is-16by9">
+                                                    <img src="{{award.image}}" alt="Image" class="img-fluid">
+                                                </figure>
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <figure class="image is-48x48">
+                                                            <img src="{{award.image}}" alt="img-fluid" width="75%">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="media-content">
+                                                        <p class="title is-4 no-padding">{{award.developer}}</p>
+                                                        <p>
+                                                            <span class="title is-6">
+                                  <span style="color: black;">Explore more </span><a href="{% url 'main:detail' award.id %}" style="text-decoration: none;">  {{award.name}} </a> </span>
+                                                        </p>
+                                                        <p class="subtitle is-6">{{award.}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    {{award.description}}
+                                                    <div class="background-icon"><span class="icon-twitter"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
                         </div>
-                        <div class="content">
-                          {{award.description}}
-                          <div class="background-icon"><span class="icon-twitter"></span></div>
-                        </div>
-                      </div>
-                    </div>                 
+                    </div>
                 </div>
-              </div>
             </div>
-            {% endfor %}
-          </div>
-          </div>
         </div>
-      </div>
-      </div>
     </section>
     <section id="parallax-3" class="hero is-large ">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-6 is-offset-6">
-              <h1 class="title is-1 ">Marathon Website</h1>
-              <hr class="content-divider">
-              <h2 class="subtitle">This is a website/platform where people can access opportunities pertaining sports and can access those related guidlines as long as they are a member of that website, its also motivates the runners by keeping track of what they expect if they achieve it .</h2>
-              <a href="https://joegakumo21.github.io/Marathon-Website2/" class="button is-white is-inverted" style="text-decoration: none;"> Visit the site &ensp;<i class="fad fa-chevron-right"></i></a>
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-6 is-offset-6">
+                        <h1 class="title is-1 ">Marathon Website</h1>
+                        <hr class="content-divider">
+                        <h2 class="subtitle">This is a website/platform where people can access opportunities pertaining sports and can access those related guidlines as long as they are a member of that website, its also motivates the runners by keeping track of what they
+                            expect if they achieve it .</h2>
+                        <a href="https://joegakumo21.github.io/Marathon-Website2/" class="button is-white is-inverted" style="text-decoration: none;"> Visit the site &ensp;<i class="fad fa-chevron-right"></i></a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
     <section class="cta va">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-6">
-            <h1 class="title is-1 ">Adipisicing Elit</h1>
-            <hr class="content-divider">
-            <h2 class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas ut nulla maiores, beatae voluptas sunt excepturi deserunt vero. Beatae est ratione quia neque molestias, cum asperiores quibusdam rem illum, debitis dolorem natus, eos fuga eveniet numquam ab officia reiciendis inventore. Tempore repudiandae exercitationem quisquam? Fugiat!</h2>
-          </div>
-          <div class="column is-6">
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="control">
-                <input class="input is-medium" type="text" placeholder="Joe JoeKumsy">
-              </div>
-            </div>
-            <br>
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
-                <input class="input is-medium" type="email" placeholder="joegakumo1@gmail.com">
-              </div>
-            </div>
-            <br>
-            <div class="field is-grouped">
-              <div class="control">
-                <button class="button is-white is-rounded is-outlined">Submit</button>
-              </div>
+        <div class="container">
+            <div class="columns">
+                <div class="column is-6">
+                    <h1 class="title is-1 ">Adipisicing Elit</h1>
+                    <hr class="content-divider">
+                    <h2 class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas ut nulla maiores, beatae voluptas sunt excepturi deserunt vero. Beatae est ratione quia neque molestias, cum asperiores quibusdam rem illum, debitis dolorem natus, eos
+                        fuga eveniet numquam ab officia reiciendis inventore. Tempore repudiandae exercitationem quisquam? Fugiat!</h2>
+                </div>
+                <div class="column is-6">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input is-medium" type="text" placeholder="Joe JoeKumsy">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input is-medium" type="email" placeholder="joegakumo1@gmail.com">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-white is-rounded is-outlined">Submit</button>
+                        </div>
 
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
 
     </section>
     <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Awawwds Review Site</strong> by <a href="#">Joseph Gakumo Munyui</a>. The source code is licensed
-          <a href="#">MIT</a>. The website content
-          is licensed <a href="#">JoeKumsy Dev 4.0</a>.
-        </p>
-      </div>
+        <div class="content has-text-centered">
+            <p>
+                <strong>Awawwds Review Site</strong> by <a href="#">Joseph Gakumo Munyui</a>. The source code is licensed
+                <a href="#">MIT</a>. The website content is licensed <a href="#">JoeKumsy Dev 4.0</a>.
+            </p>
+        </div>
     </footer>
     <script>
         var app = new Vue({
-          el: '#app',
-          data: {
-            cardData: cardsData
-          }
+            el: '#app',
+            data: {
+                cardData: cardsData
+            }
         })
-  
-      </script>
-      
-    </body>
+    </script>
+
+</body>
 
 </html>
 
-  
+
 
 {% endblock %}
