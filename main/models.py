@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 # creating database tables and it attributes
 class Award(models.Model):
     name=models.CharField(max_length=300)
-    description=models.TextField(max_length=5000)     
+    description=models.TextField(max_length=50000)     
     developer=models.CharField(max_length=300)
     created_date=models.DateField()
     averangeRating=models.FloatField(default=0)
